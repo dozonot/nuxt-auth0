@@ -2,6 +2,29 @@
 
 > My laudable Nuxt.js project
 
+## Setup
+
+- Replace YOUR_DOMAIN, and YOUR_CLIENT_ID in nuxt.config.js
+
+```javascript
+export default {
+  mode: 'spa',
+  auth: {
+    strategies: {
+      auth0: {
+        domain: 'YOUR_DOMAIN',
+        client_id: 'YOUR_CLIENT_ID'
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/logout',
+      callback: '/callback',
+      home: '/profile'
+    }
+  },
+```
+
 ## Build Setup
 
 ``` bash
